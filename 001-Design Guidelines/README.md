@@ -4,7 +4,7 @@ You must develop a design philosophy that establishes a set of guidelines. This 
 
 * Philosophy
     * [Prepare Your Mind](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#prepare-your-mind)
-    * [Legacy Software](https://github.com/ardanlabs/gotraining/tree/master/topics/go#legacy-software)
+    * [Legacy Software](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#legacy-software)
 
 ---
 
@@ -71,5 +71,29 @@ _"Few programmers of any experience would contradict the assertion that most pro
 _"We think awful code is written by awful devs. But in reality, it's written by reasonable devs in awful circumstances." - Sarah Mei_
 
 _"There are many reasons why programs are built the way they are, although we may fail to recognize the multiplicity of reasons because we usually look at code from the outside rather than by reading it. When we do read code, we find that some of it gets written because of machine limitations, some because of language limitations, some because of programmer limitations, some because of historical accidents, and some because of specifications—both essential and inessential." - Gerald M. Weinberg_
+
+---
+
+### Mental Models
+
+You must constantly make sure your mental model of the code you are writing and maintaining is clear. When you can't remember where a piece of logic is or you can't remember how something works, you’re losing your mental model of the code. This is a clear indication that you need to refactor the code. Focus time on structuring code that provides the best mental model possible and during code reviews validate your mental models are still intact.
+
+How much code do you think you can maintain in your head? I believe asking a single developer to maintain a mental model of more than one ream of copy paper (~10k lines of code) is asking a lot. If you do the math, it takes a team of 100 people to work on a code base that hits a million lines of code. That’s 100 people that need to be coordinated, grouped, tracked and in a constant feedback loop of communication.
+
+**Quotes**
+
+_"Let's imagine a project that's going to end up with a million lines of code or more. The probability of those projects being successful in the United States these days is very low - well under 50%. That's debatable." - Tom Love (inventor of Objective C)_
+
+_"100k lines of code fit inside a box of paper." - Tom Love (inventor of Objective C)_
+
+_"One of our many problems with thinking is “cognitive load”: the number of things we can pay attention to at once. The cliche is 7±2, but for many things it is even less. We make progress by making those few things be more powerful." - Alan Kay_
+
+_"The hardest bugs are those where your mental model of the situation is just wrong, so you can't see the problem at all." - Brian Kernighan_
+
+_"Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?" - Brian Kernighan_
+
+_"Debuggers don't remove bugs. They only show them in slow motion." - Unknown_
+
+_"Fixing bugs is just a side effect. Debuggers are for exploration." - @Deech (Twitter)_
 
 ---
