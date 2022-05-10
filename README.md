@@ -1,2 +1,2 @@
-# GolangTraining
-Golang Training Material
+## Golang Training
+
