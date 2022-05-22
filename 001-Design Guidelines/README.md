@@ -6,17 +6,11 @@ You must develop a design philosophy that establishes a set of guidelines. This 
     * [Prepare Your Mind](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#prepare-your-mind)
     * [Legacy Software](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#legacy-software)
     * [Mental Models](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#mental-models)
-    * [Productivity vs Performance](https://github.com/ardanlabs/gotraining/tree/master/topics/go#productivity-vs-performance)
-    * [Correctness vs Performance](https://github.com/ardanlabs/gotraining/tree/master/topics/go#correctness-vs-performance)
-    * [Rules](https://github.com/ardanlabs/gotraining/tree/master/topics/go#rules)
-    * [Senior vs Junior Developers](https://github.com/ardanlabs/gotraining/tree/master/topics/go#senior-vs-junior-developers)
-    * [Design Philosophy](https://github.com/ardanlabs/gotraining/tree/master/topics/go#design-philosophy)
-* Guidelines
-    * [Data Oriented Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#data-oriented-design)
-    * [Interface And Composition Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#interface-and-composition-design)
-    * [Package Oriented Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#package-oriented-design)
-    * [Concurrent Software Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design)
-    * [Channel Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#channel-design)
+    * [Productivity vs Performance](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#productivity-vs-performance)
+    * [Correctness vs Performance](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#correctness-vs-performance)
+    * [Rules](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#rules)
+    * [Senior vs Junior Developers](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#senior-vs-junior-developers)
+    * [Design Philosophy](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#design-philosophy)
 
 ---
 
@@ -341,4 +335,35 @@ _"Computing is all about abstractions. Those below yours are just details. Those
 [What did Alan Kay mean by, "Lisp is the greatest single programming language ever designed"?](https://www.quora.com/What-did-Alan-Kay-mean-by-Lisp-is-the-greatest-single-programming-language-ever-designed/answer/Alan-Kay-11) - Alan Kay
 
 ---
+
+#### Performance
+
+**_We must compute less to get the results we need._**
+
+This is about not wasting effort and achieving execution efficiency. Writing code that is mechanically sympathetic with the runtime, operating system and hardware. Achieving performance by writing less and more efficient code, but staying within the idioms and framework of the language.
+
+**Quotes**
+
+_"Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%." — Donald E. Knuth_
+
+_"I don't trust anything until it runs... In fact, I don't trust anything until it runs twice." - Andrew Gelman (one of the greatest living statisticians at Columbia University)._
+
+Rules of Performance:   
+    * Never guess about performance.  
+    * Measurements must be relevant.  
+    * Profile before you decide something is performance critical.  
+    * Test to know you are correct.
+
+[Example Benchmark](https://github.com/ardanlabs/gotraining/blob/master/topics/go/testing/benchmarks/basic/basic_test.go)  
+
+**Broad Engineering**
+
+Performance is important but it can't be your priority unless the code is not running fast enough. You only know this once you have a working program and you have validated it. We place those who we think know how to write performant code on a pedestal. We need to put those who write code that is optimized for correctness and performs fast enough on those pedestals.
+
+**Quotes**
+
+_"When we're computer programmers we're concentrating on the intricate little fascinating details of programming and we don't take a broad engineering point of view about trying to optimize the total system. You try to optimize the bits and bytes." - Tom Kurtz (inventor of BASIC)_
+     
+---
+
 
