@@ -5,6 +5,18 @@ You must develop a design philosophy that establishes a set of guidelines. This 
 * Philosophy
     * [Prepare Your Mind](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#prepare-your-mind)
     * [Legacy Software](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#legacy-software)
+    * [Mental Models](https://github.com/deeprajsshetty/GolangTraining/tree/master/001-Design%20Guidelines#mental-models)
+    * [Productivity vs Performance](https://github.com/ardanlabs/gotraining/tree/master/topics/go#productivity-vs-performance)
+    * [Correctness vs Performance](https://github.com/ardanlabs/gotraining/tree/master/topics/go#correctness-vs-performance)
+    * [Rules](https://github.com/ardanlabs/gotraining/tree/master/topics/go#rules)
+    * [Senior vs Junior Developers](https://github.com/ardanlabs/gotraining/tree/master/topics/go#senior-vs-junior-developers)
+    * [Design Philosophy](https://github.com/ardanlabs/gotraining/tree/master/topics/go#design-philosophy)
+* Guidelines
+    * [Data Oriented Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#data-oriented-design)
+    * [Interface And Composition Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#interface-and-composition-design)
+    * [Package Oriented Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#package-oriented-design)
+    * [Concurrent Software Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design)
+    * [Channel Design](https://github.com/ardanlabs/gotraining/tree/master/topics/go#channel-design)
 
 ---
 
@@ -96,4 +108,237 @@ _"Debuggers don't remove bugs. They only show them in slow motion." - Unknown_
 
 _"Fixing bugs is just a side effect. Debuggers are for exploration." - @Deech (Twitter)_
 
+**Resources:**
+
+[The Magical Number Seven, Plus or Minus Two](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two) - Wikipedia  
+[Psychology of Code Readability](https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a) - Egon Elbre  
+
 ---
+
+### Productivity vs Performance
+
+Productivity and performance both matter, but in the past you couldn’t have both. You needed to choose one over the other. We naturally gravitated to productivity, with the idea or hope that the hardware would resolve our performance problems for free. This movement towards productivity has resulted in the design of programming languages that produce sluggish software that is outpacing the hardware’s ability to make them faster.
+
+By following Go’s idioms and a few guidelines, we can write code that can be reasoned about by average developers. We can write software that simplifies, minimizes and reduces the amount of code we need to write to solve the problems we are working on. We don’t have to choose productivity over performance or performance over productivity anymore. We can have both.
+
+**Quotes**
+
+_"The hope is that the progress in hardware will cure all software ills. However, a critical observer may observe that software manages to outgrow hardware in size and sluggishness. Other observers had noted this for some time before, indeed the trend was becoming obvious as early as 1987." - Niklaus Wirth_
+
+_"The most amazing achievement of the computer software industry is its continuing cancellation of the steady and staggering gains made by the computer hardware industry." - Henry Petroski (2015)_
+
+_"The hardware folks will not put more cores into their hardware if the software isn’t going to use them, so, it is this balancing act of each other staring at each other, and we are hoping that Go is going to break through on the software side.” - Rick Hudson (2015)_
+
+_"C is the best balance I've ever seen between power and expressiveness. You can do almost anything you want to do by programming fairly straightforwardly and you will have a very good mental model of what's going to happen on the machine; you can predict reasonably well how quickly it's going to run, you understand what's going on .... - Brian Kernighan (2000)_
+
+_"The trend in programming language design has been to create languages that enhance software reliability and programmer productivity. What we should do is develop languages alongside sound software engineering practices so the task of developing reliable programs is distributed throughout the software lifecycle, especially into the early phases of system design." - Al Aho (2009)_
+
+---
+
+### Correctness vs Performance
+
+You want to write code that is optimized for correctness. Don't make coding decisions based on what you think might perform better. You must benchmark or profile to know if code is not fast enough. Then and only then should you optimize for performance. This can't be done until you have something working.
+
+Improvement comes from writing code and thinking about the code you write. Then refactoring the code to make it better. This requires the help of other people to also read the code you are writing. Prototype ideas first to validate them. Try different approaches or ask others to attempt a solution. Then compare what you have learned.
+
+Too many developers are not prototyping their ideas first before writing production code. It’s through prototyping that you can validate your thoughts, ideas and designs. This is the time when you can break down walls and figure out how things work. Prototype in the concrete and consider contracts after you have a working prototype.
+
+Refactoring must become part of the development cycle. Refactoring is the process of improving the code from the things that you learn on a daily basis. Without time to refactor, code will become impossible to manage and maintain over time. This creates the legacy issues we are seeing today.
+
+**Quotes**
+
+_"Make it correct, make it clear, make it concise, make it fast. In that order." - Wes Dyer_
+
+_"Good engineering is less about finding the "perfect" solution and more about understanding the tradeoffs and being able to explain them." - JBD_
+
+_"Choosing the right limitations for a certain problem domain is often much more powerful than allowing anything." - Jason Moiron_
+
+_"The correctness of the implementation is the most important concern, but there is no royal road to correctness. It involves diverse tasks such as thinking of invariants, testing and code reviews. Optimization should be done, but not prematurely." - Al Aho (inventor of AWK)_
+
+_"The basic ideas of good style, which are fundamental to write clearly and simply, are just as important now as they were 35 years ago. Simple, straightforward code is just plain easier to work with and less likely to have problems. As programs get bigger and more complicated, it's even more important to have clean, simple code." - Brian Kernighan_
+
+_"Problems can usually be solved with simple, mundane solutions. That means there's no glamorous work. You don't get to show off your amazing skills. You just build something that gets the job done and then move on. This approach may not earn you oohs and aahs, but it lets you get on with it." - Jason Fried_
+
+**Resources:**
+
+[Prototype your design!](https://www.youtube.com/watch?v=vLxX3yZmw5Q) - Robert Griesemer
+
+---
+
+### Rules
+
+* Rules have costs.
+* Rules must pull their weight - Don’t be clever (high level).
+* Value the standard, don’t idolize it.
+* Be consistent!
+* Semantics convey ownership.
+
+**Quotes**
+
+_"An architecture isn't a set of pieces, it's a set of rules about what you can expect of them." - Michael Feathers_
+
+**Resources:**
+
+[The Philosophy of Google's C++ Code](https://www.youtube.com/watch?v=NOCElcMcFik) - Titus Winters
+
+---
+
+### Senior vs Junior Developers
+
+What is the difference between a Senior and Junior developer?
+
+**Quotes**
+
+_"You are personally responsible for the software you write." - Stephen Bourne (Bourne shell)_
+
+_"And the difference between juniors+seniors to those who are in-between, is the confidence to ask "dumb" questions." - Natalie Pistunovich_
+
+_"Mistakes are an inevitable consequence of doing something new and, as such, should be seen as valuable; without them, we'd have no originality." - Ed Catmull (President of Pixar)_
+
+_"It takes considerable knowledge just to realize the extent of your own ignorance." - Thomas Sowell_
+
+_"If you don’t make mistakes, you’re not working on hard enough problems." - Frank Wilczek_
+
+_"Don’t cling to a mistake because you spent so much time making it." - Aubrey de Grey_
+
+---
+
+### Design Philosophy
+
+You can't look at a piece of code, function or algorithm and determine if it smells good or bad without a design philosophy. These four major categories are the basis for code reviews and should be prioritized in this order: Integrity, Readability, Simplicity and then Performance. You must consciously and with great reason be able to explain the category you are choosing.
+
+---
+
+#### Integrity
+
+**_We need to become very serious about reliability._**
+
+There are two driving forces behind integrity:  
+* Integrity is about every allocation, read and write of memory being accurate, consistent and efficient. The type system is critical to making sure we have this `micro` level of integrity.
+* Integrity is about every data transformation being accurate, consistent and efficient. Writing less code and error handling is critical to making sure we have this `macro` level of integrity.
+
+**Write Less Code:**
+
+There have been studies that have researched the number of bugs you can expect to have in your software. The industry average is around 15 to 50 bugs per 1000 lines of code. One simple way to reduce the number of bugs, and increase the integrity of your software, is to write less code.
+
+Bjarne Stroustrup stated that writing more code than you need results in `Ugly`, `Large` and `Slow` code:
+
+* `Ugly`: Leaves places for bugs to hide.
+* `Large`: Ensures incomplete tests.
+* `Slow`: Encourages the use of shortcuts and dirty tricks.
+
+**Error Handling:**
+
+When error handling is treated as an exception and not part of the main code path, you can expect the majority of your critical failures to be due to error handling.
+
+There was a study that looked at a couple hundred bugs in Cassandra, HBase, HDFS, MapReduce, and Redis. The study identified 48 critical failures that fell into these categories.
+
+* 92% : Failures from bad error handling
+    * 35% : Incorrect handling
+        * 25% : Simply ignoring an error
+        * 8% : Catching the wrong exception
+        * 2% : Incomplete TODOs
+    * 57% System specific
+        * 23% : Easily detectable
+        * 34% : Complex bugs
+* 8% : Failures from latent human errors
+
+**Quotes**
+
+_"Failure is expected, failure is not an odd case. Design systems that help you identify failure. Design systems that can recover from failure." - JBD_
+
+_"Product excellence is the difference between something that only works under certain conditions, and something that only breaks under certain conditions". - Kelsey Hightower_
+
+_"Instability is a drag on innovation." - Yehudah Katz_
+
+**Resources:**
+
+[Software Development for Infrastructure](http://www.stroustrup.com/Software-for-infrastructure.pdf) - Bjarne Stroustrup  
+[Normalization of Deviance in Software](http://danluu.com/wat/) - danluu.com  
+[Lessons learned from reading postmortems](http://danluu.com/postmortem-lessons/) - danluu.com  
+[Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) - Martin Fowler  
+[Design Philosophy On Integrity](https://www.ardanlabs.com/blog/2017/02/design-philosophy-on-integrity.html) - William Kennedy  
+[Ratio of bugs per line of code](https://www.mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio) - Dan Mayer  
+[Masterminds of Programming](http://dl.acm.org/citation.cfm?id=1592983) - Federico Biancuzzi and Shane Warden  
+[Developing Software The Right Way, with Intent and Carefulness](http://ipengineer.net/2017/04/developing-software-the-right-way-with-intent-and-carefulness) - David Gee   
+[What bugs live in the Cloud](https://www.usenix.org/system/files/login/articles/login_aug15_08_gunawi.pdf) - usenix.org
+
+---
+
+#### Readability
+
+**_We must structure our systems to be more comprehensible._**
+
+This is about writing simple code that is easier to read and understand without the need of mental exhaustion. Just as important, it's about not hiding the cost/impact of the code per line, function, package and the overall ecosystem it runs in.
+
+[Example Readability Issue](http://cpp.sh/6i7d)  
+
+**Code Must Never Lie**
+
+It doesn't matter how fast the code might be if no one can understand or maintain it moving forward.
+
+**Quotes**
+
+_"This is a cardinal sin amongst programmers. If code looks like it’s doing one thing when it’s actually doing something else, someone down the road will read that code and misunderstand it, and use it or alter it in a way that causes bugs. That someone might be you, even if it was your code in the first place." - Nate Finch_
+
+[Code Must Never Lie](https://npf.io/2017/08/lies)
+
+**Average Developer**
+
+You must be aware of who you are on your team. When hiring new people, you must be aware of where the new person falls. Code must be written for the average developer to comprehend. If you are below average for your team, you have the responsibility to work to be average. If you are above average, you have the responsibility to reduce writing clever code and coach/mentor.
+
+**Quotes**
+
+_"Can you explain it to the median user (developer)? as opposed to will the smartest user (developer) figure it out?" - Peter Weinberger (inventor of AWK)_
+
+**Real Machine**
+
+In Go, the underlying machine is a real machine, unlike what you would find in Java or C# with their virtual machine layer. The model of computation is that of the computer. Here is the key, Go gives you direct access to the machine while still providing abstraction mechanisms to allow higher-level ideas to be expressed.
+
+**Quotes**
+
+_"Making things easy to do is a false economy. Focus on making things easy to understand and the rest will follow." - Peter Bourgon_
+
+---
+
+#### Simplicity
+
+**_We must understand that simplicity is hard to design and complicated to build._**
+
+This is about hiding complexity. A lot of care and design must go into simplicity because this can cause more problems then good. It can create issues with readability and it can cause issues with performance.
+
+**Complexity Sells Better**
+
+Focus on encapsulation and validate that you're not generalizing or even being too concise. You might think you are helping the programmer or the code but validate things are still easy to use, understand, debug and maintain.
+
+**Quotes**
+
+_"Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better." - Edsger W. Dijkstra_
+
+_"Everything should be made as simple as possible, but not simpler." - Albert Einstein_
+
+_"You wake up and say, I will be productive, not simple, today." - Dave Cheney_
+
+**Encapsulation**
+
+Encapsulation is what we have been trying to figure out as an industry for 40+ years. Go is taking a slightly new approach with the package. Bringing encapsulation up a level and providing richer support at the language level.
+
+**Quotes**
+
+_Paraphrasing: "Encapsulation and the separation of concerns are drivers for designing software. This is largely based on how other industries handle complexity. There seems to be a human pattern of using encapsulation to wrestle complexity to the ground." - Brad Cox (inventor of Objective C)_
+
+_"The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise." - Edsger W. Dijkstra_
+
+_"A proper abstraction decouples the code so that every change doesn’t echo throughout the entire code base."_ - Ronna Steinburg
+
+_"A good API is not just easy to use but also hard to misuse." - JBD_
+
+_"Computing is all about abstractions. Those below yours are just details. Those above yours are limiting complicated crazy town." - Joe Beda_
+
+**Resources:**
+
+[Simplicity is Complicated](https://www.youtube.com/watch?v=rFejpH_tAHM) - Rob Pike  
+[What did Alan Kay mean by, "Lisp is the greatest single programming language ever designed"?](https://www.quora.com/What-did-Alan-Kay-mean-by-Lisp-is-the-greatest-single-programming-language-ever-designed/answer/Alan-Kay-11) - Alan Kay
+
+---
+
