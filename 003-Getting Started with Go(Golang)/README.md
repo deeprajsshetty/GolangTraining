@@ -4,6 +4,8 @@ Go is a very well documented programming language but this documentation can be 
 
 * References
     * [Go Resources](https://www.golang-book.com/)
+    * [Multi-module workspaces](https://go.dev/doc/tutorial/workspaces)
+    * [GOPATH](https://go.dev/doc/gopath_code)
 
 * STEPS
     * [Setup Terminal](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
