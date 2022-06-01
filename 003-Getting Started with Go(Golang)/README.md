@@ -9,7 +9,7 @@ Go is a very well documented programming language but this documentation can be 
     * [Setup Terminal](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
     * [Installing Go](https://go.dev/doc/install)
     * [Go Commands](https://pkg.go.dev/cmd/go)
-    * [Go workspace] 
+    * [Go workspace](https://github.com/deeprajsshetty/GolangTraining/tree/master/003-Getting%20Started%20with%20Go(Golang)#go-workspace) 
 ---
 
 ### Go Workspace
