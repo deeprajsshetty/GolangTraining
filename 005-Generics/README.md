@@ -47,4 +47,9 @@ based on a function passed in.
 * MyFilter can be made generic.
 * 004-BenefitsOfGenerics -> 003-FilterFunctions -> 02-Generic explained the details with Example.
 
+## Examples
+
+**Generics Using WaitGroup**  
+* 005-Generics -> 005-Examples -> 001-GenericsUsingWaitGroup.
+
 
