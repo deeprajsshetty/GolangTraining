@@ -14,3 +14,27 @@ Goroutines are functions that run concurrent with other functions. When a regula
 Go provides a mechanism for allowing multiple goroutines to all complete their work before main exits while killing off unfinished goroutines. Go introduce the sync package and the WaitGroup.
 * 006-Concurrency -> 002-WaitGroup explained the details with Example.
 
+## The Channel
+
+We often want to be able to synchronize the sequence of goroutines and have them communicate with each other. We introduce the powerful construct of the **channel** to accomplish this.
+
+**Select Statement**
+* 006-Concurrency -> 002-Channel -> 002-ChannelUsingSelect explained the details with Example.
+
+**Use a quit Channel to Avoid Using WaitGroup**
+* 006-Concurrency -> 002-Channel -> 003-QuitChannel explained the details with Example.
+
+## Channel Direction
+Channel direction can be added to a goroutine signature. An arrow pointing to the chan from the right, as shown in the signatures to pingGenerator and pongGenerator, requires the goroutine to assign to the channel (a generator). An arrow to the left of chan and pointing to the channel variable requires the goroutine to only consume values in the channel.
+* 006-Concurrency -> 002-Channel -> 004-ChannelDirection explained the details with Example.
+
+**Race Condition**
+* A pervasive problem using concurrency is race condition. This problem occurs when two or more goroutines modify the same shared data.
+* 006-Concurrency -> 002-Channel -> 005-RaceCondition explained the details with Example.
+
+
+**Mutex**
+* We can correct the race-condition problem by using a mutex.
+* Program execution is slowed down using the mutex, but the program is protected from the race condition
+* 006-Concurrency -> 002-Channel -> 006-Mutex explained the details with Example.
+
