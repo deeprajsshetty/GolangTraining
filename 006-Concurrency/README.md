@@ -10,31 +10,31 @@ In developing the Go language, Google introduced a lightweight process called a 
 Goroutines are functions that run concurrent with other functions. When a regular function is invoked.
 
 **WaitGroup**  
-* In 001-SimpleGoroutineExample, we have not used WaitGroup so the goroutine running concurrently with main completes it work before the regularFunction and before the main goroutine exits. To handle this sceanrio,
+* In 001-SimpleGoroutineExample ***(Code REf - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/001-SimpleGoroutineExample)***, we have not used WaitGroup so the goroutine running concurrently with main completes it work before the regularFunction and before the main goroutine exits. To handle this sceanrio,
 Go provides a mechanism for allowing multiple goroutines to all complete their work before main exits while killing off unfinished goroutines. Go introduce the sync package and the WaitGroup.
-* 006-Concurrency -> 002-WaitGroup explained the details with Example.
+* 006-Concurrency -> 002-WaitGroup explained the details with Example ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/002-WaitGroup)***.
 
 ## The Channel
 
 We often want to be able to synchronize the sequence of goroutines and have them communicate with each other. We introduce the powerful construct of the **channel** to accomplish this.
+***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/003-Channel/001-SimpleChannelExample)***
 
 **Select Statement**
-* 006-Concurrency -> 002-Channel -> 002-ChannelUsingSelect explained the details with Example.
+* 006-Concurrency -> 002-Channel -> 002-ChannelUsingSelect explained the details with Example ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/003-Channel/002-ChannelUsingSelect)***.
 
 **Use a quit Channel to Avoid Using WaitGroup**
-* 006-Concurrency -> 002-Channel -> 003-QuitChannel explained the details with Example.
+* 006-Concurrency -> 002-Channel -> 003-QuitChannel explained the details with Example ***(Code REf - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/003-Channel/003-QuitChannel)***.
 
 ## Channel Direction
 Channel direction can be added to a goroutine signature. An arrow pointing to the chan from the right, as shown in the signatures to pingGenerator and pongGenerator, requires the goroutine to assign to the channel (a generator). An arrow to the left of chan and pointing to the channel variable requires the goroutine to only consume values in the channel.
-* 006-Concurrency -> 002-Channel -> 004-ChannelDirection explained the details with Example.
+* 006-Concurrency -> 002-Channel -> 004-ChannelDirection explained the details with Example ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/003-Channel/004-ChannelDirection)***.
 
 **Race Condition**
 * A pervasive problem using concurrency is race condition. This problem occurs when two or more goroutines modify the same shared data.
-* 006-Concurrency -> 002-Channel -> 005-RaceCondition explained the details with Example.
-
+* 006-Concurrency -> 002-Channel -> 005-RaceCondition explained the details with Example ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/003-Channel/005-RaceCondition)***.
 
 **Mutex**
 * We can correct the race-condition problem by using a mutex.
 * Program execution is slowed down using the mutex, but the program is protected from the race condition
-* 006-Concurrency -> 002-Channel -> 006-Mutex explained the details with Example.
+* 006-Concurrency -> 002-Channel -> 006-Mutex explained the details with Example ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/003-Channel/006-Mutex)***.
 
