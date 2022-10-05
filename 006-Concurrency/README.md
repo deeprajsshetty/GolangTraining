@@ -42,15 +42,15 @@ Channel direction can be added to a goroutine signature. An arrow pointing to th
 The goal in using concurrency is to speed up program execution. There is overhead in deploying goroutines, so sometimes, using concurrency is counterproductive. Because debugging concurrent code is challenging and dealing with deadlocks and race conditions is sometimes tricky, one needs to be careful when crafting concurrent solutions to a problem. Testing a concurrent application and comparing its performance with a nonconcurrent solution is useful.
 
 **Benchmarking Construct and sum 100 million floating-point numbers**
-* Using Concurrency Vs Sequencing Process: 006-Concurrency -> 004-BenchmarkingConcurrentApplications -> 001-ConcurrentVsSequentialProcess
-* We can speed up above algorithm by summing half the numbers in each of two goroutines: 006-Concurrency -> 004-BenchmarkingConcurrentApplications -> 002-ConcurrencyUsingDivideAndConquer
+* Using Concurrency Vs Sequencing Process: 006-Concurrency -> 004-BenchmarkingConcurrentApplications -> 001-ConcurrentVsSequentialProcess ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/004-BenchmarkingConcurrentApplications/001-ConcurrentVsSequentialProcess)***
+* We can speed up above algorithm by summing half the numbers in each of two goroutines: 006-Concurrency -> 004-BenchmarkingConcurrentApplications -> 002-ConcurrencyUsingDivideAndConquer ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/004-BenchmarkingConcurrentApplications/002-ConcurrencyUsingDivideAndConquer)***
 
 ## Examples
 
 **Playing Chess Using Goroutines**
-* 006-Concurrency -> 005-Examples -> 001-ChessUsingGoroutines
+* 006-Concurrency -> 005-Examples -> 001-ChessUsingGoroutines ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/005-Examples/001-ChessUsingGoroutines)***
 
 **Fibonacci Numbers Using Goroutines**
 * This example output a sequence of Fibonacci numbers using a goroutine.
-* 006-Concurrency -> 005-Examples -> 002-FibonacciNoUsingGoroutines
+* 006-Concurrency -> 005-Examples -> 002-FibonacciNoUsingGoroutines ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/006-Concurrency/005-Examples/002-FibonacciNoUsingGoroutines)***
 
