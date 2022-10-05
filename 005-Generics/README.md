@@ -52,4 +52,3 @@ based on a function passed in.
 **Generics Using WaitGroup**  
 * 005-Generics -> 005-Examples -> 001-GenericsUsingWaitGroup ***(Code Ref - https://github.com/deeprajsshetty/GolangTraining/tree/master/005-Generics/005-Examples/001-GenericsUsingWaitGroup)***.
 
-
