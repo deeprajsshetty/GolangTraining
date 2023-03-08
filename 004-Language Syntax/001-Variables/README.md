@@ -31,7 +31,7 @@ Variables are at the heart of the language and provide the ability to read from 
     - String "" (empty string)
     - Pointer nil
 
-[Declare and initialize variables](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/004.001-Variables/001-DeclareAndInitializeVariables/main.go)
+[Declare and initialize variables](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/001-Variables/001-DeclareAndInitializeVariables/main.go)
 
 ## Exercises
 
@@ -41,7 +41,7 @@ Variables are at the heart of the language and provide the ability to read from 
 
 **Part B:** Declare a new variable of type float32 and initialize the variable by converting the literal value of Pi (3.14).
 
-[Solution](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/004.001-Variables/002-Exercise/main.go) 
+[Solution](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/001-Variables/002-Exercise/main.go) 
 
 ---
 
