@@ -1,5 +1,3 @@
-**Refer - https://github.com/deeprajsshetty/PlayGoLang**
-
 ## Variables
 
 Variables are at the heart of the language and provide the ability to read from and write to memory. In Go, access to memory is type safe. This means the compiler takes type seriously and will not allow us to use variables outside the scope of how they are declared.
@@ -43,7 +41,7 @@ Variables are at the heart of the language and provide the ability to read from 
 
 **Part B:** Declare a new variable of type float32 and initialize the variable by converting the literal value of Pi (3.14).
 
-[Solution]([exercises/template1/template1.go](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/004.001-Variables/002-Exercise/main.go)) 
+[Solution](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/004.001-Variables/002-Exercise/main.go) 
 
 ---
 
