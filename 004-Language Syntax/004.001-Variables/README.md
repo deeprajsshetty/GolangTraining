@@ -33,7 +33,7 @@ Variables are at the heart of the language and provide the ability to read from 
     - String "" (empty string)
     - Pointer nil
 
-[Declare and initialize variables](example1/example1.go) ([Go Playground](https://play.golang.org/p/xD_6ghgB7wm))
+[Declare and initialize variables]()
 
 ## Exercises
 
