@@ -25,12 +25,12 @@ _"Implicit conversion of types is the Halloween special of coding. Whoever thoug
 ## Code Review
 
 [Declare, create and initialize struct types](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/002-Struct%20Types/001-DeclareCreateAndInitStructTypes/main.go)
-[Anonymous struct types](example2/example2.go)
-[Named vs Unnamed types](example3/example3.go)
+[Anonymous struct types](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/002-Struct%20Types/002-AnonymousStructTypes/main.go)
+[Named vs Unnamed types](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/002-Struct%20Types/003-NamedVsUnnamedTypes/main.go)
 
 ## Advanced Code Review
 
-[Struct type alignments](advanced/example1/example1.go) ([Go Playground](https://play.golang.org/p/rAvtS7cgD0z))
+[Struct type alignments](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/002-Struct%20Types/004-StructTypeAlignment/main.go)
 
 ## Exercises
 
@@ -40,6 +40,5 @@ _"Implicit conversion of types is the Halloween special of coding. Whoever thoug
 
 **Part B:** Declare and initialize an anonymous struct type with the same three fields. Display the value.
 
-[Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/h-7BEn2U3Rz)) | 
-[Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/eT_gLZKeHk-))
+[Solution](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/002-Struct%20Types/005-Exercise/main.go)
 ___
