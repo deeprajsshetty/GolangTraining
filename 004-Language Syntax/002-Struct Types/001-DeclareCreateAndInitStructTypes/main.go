@@ -27,15 +27,17 @@ func main() {
 	}
 
 	// Display the field values.
+	fmt.Printf("%+v\n", e2)
 	fmt.Println("Flag", e2.flag)
 	fmt.Println("Counter", e2.counter)
-	fmt.Println("pi", e2.pi)
+	fmt.Println("Pi", e2.pi)
 }
 
 /* Output
 ******Declare a variable of type example set to its zero value.*************************************************************
 {flag:false counter:0 pi:0}
 ******Declare a variable of type example and init using a struct literal.***************************************************
+{flag:true counter:10 pi:3.141592}
 Flag true
 Counter 10
 pi 3.141592

@@ -25,8 +25,8 @@ _"Implicit conversion of types is the Halloween special of coding. Whoever thoug
 ## Code Review
 
 [Declare, create and initialize struct types](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/002-Struct%20Types/001-DeclareCreateAndInitStructTypes/main.go)
-[Anonymous struct types](example2/example2.go) ([Go Playground](https://play.golang.org/p/09cxjnmfcdC))  
-[Named vs Unnamed types](example3/example3.go) ([Go Playground](https://play.golang.org/p/ky91roJDjir))
+[Anonymous struct types](example2/example2.go)
+[Named vs Unnamed types](example3/example3.go)
 
 ## Advanced Code Review
 
