@@ -73,13 +73,9 @@ _"The stack is for data that needs to persist only for the lifetime of the funct
 ## Code Review
 
 [Pass by Value](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/001-PassByValue/main.go)
-
 [Sharing data I](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/002-SharingData/001-Example/main.go) 
-
 [Sharing data II](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/002-SharingData/002-Example/main.go)
-
 [Escape Analysis](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/003-EscapeAnalysis/main.go)
-
 [Stack grow](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/004-StackGrows/main.go)
 
 ### Escape Analysis Flaws
