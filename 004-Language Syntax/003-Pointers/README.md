@@ -72,11 +72,11 @@ _"The stack is for data that needs to persist only for the lifetime of the funct
 
 ## Code Review
 
-[Pass by Value](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/001-PassByValue/main.go)
-[Sharing data I](example2/example2.go) ([Go Playground](https://play.golang.org/p/mJz5RINaimn))  
-[Sharing data II](example3/example3.go) ([Go Playground](https://play.golang.org/p/GpmPICMGMre))  
-[Escape Analysis](example4/example4.go) ([Go Playground](https://play.golang.org/p/BCtJrNRJGun))  
-[Stack grow](example5/example5.go) ([Go Playground](https://play.golang.org/p/vBKF2hXvKBb))  
+[Pass by Value](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/001-PassByValue/main.go) | 
+[Sharing data I](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/002-SharingData/001-Example/main.go) |  
+[Sharing data II](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/002-SharingData/002-Example/main.go) | 
+[Escape Analysis](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/003-EscapeAnalysis/main.go) |   
+[Stack grow](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/004-StackGrows/main.go)  
 
 ### Escape Analysis Flaws
 
@@ -94,12 +94,10 @@ _"The stack is for data that needs to persist only for the lifetime of the funct
 
 **Part B** Declare and initialize a pointer variable of type int that points to the last variable you just created. Display the _address of_ , _value of_ and the _value that the pointer points to_.
 
-[Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/6QYTKWzF8s8)) |
-[Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/qq5P9gRDHKc))
+[Solution](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/005-Exercises/001-Exercise/main.go)
 
 ### Exercise 2
 
 Declare a struct type and create a value of this type. Declare a function that can change the value of some field in this struct type. Display the value before and after the call to your function.
 
-[Template](exercises/template2/template2.go) ([Go Playground](https://play.golang.org/p/nolKjrgBX-X)) |
-[Answer](exercises/exercise2/exercise2.go) ([Go Playground](https://play.golang.org/p/i6utWhgDUH4))
+[Solution](https://github.com/deeprajsshetty/GolangTraining/blob/master/004-Language%20Syntax/003-Pointers/005-Exercises/002-Exercise/main.go)
